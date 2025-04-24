@@ -15,7 +15,7 @@ async function criarCard(contato){
 }
 
 async function exibirContatos(){
-    const contatos = await getContatos()
+    const contatos = getContatos()
     contatos.forEach(criarCard)
 }
 
