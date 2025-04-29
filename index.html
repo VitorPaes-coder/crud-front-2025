@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/icon_crud.png">
     <script src='./js/main.js' defer type="module"></script>
-    <title>CRUD FRONT</title>
+    <title>Game Control</title>
 </head>
 <body>
     <header>
-        <img src="./img/logo_senai.png" alt="logo do senai">
-        <input type="text" placeholder="Digite o nome do contato" id="pesquisar">
-        <button>Novo Contato</button>
+        <img src="./img/logo_crud.png" alt="logo da game control">
+        <ul id="menu">
+            <li><span>Jogos</span></li>
+            <li><span>Desenvolvedoras</span></li>
+            <li><span>Gêneros</span></li>
+            <li><span>Usuário</span></li>
+            <li><input type="text" placeholder="Pesquise aqui..."></li>
+        </ul>
     </header>
     <main>
+        <div id="descricao">
+            <p>Saiba tudo sobre seus jogos favoritos !</p>
+        </div>
         <div class="container" id="container"></div> 
             
         </div>
-        
     </main>
 </body>
 </html>
