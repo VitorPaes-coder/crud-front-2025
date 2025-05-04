@@ -7,9 +7,8 @@ async function criarCard(jogo){
     const card = document.createElement('div')
     card.classList.add('card-jogo')
     card.innerHTML = `
-                        <img src="${jogo.foto}" alt="foto do contato">
                         <h2>${jogo.nome}</h2>
-                        <p>${jogo.celular}</p>
+                        <p>${jogo.descricao }</p>
     `
     container.appendChild(card)
 }
@@ -22,9 +21,9 @@ async function exibirJogos(){
 async function exibirPesquisa(evento) {
     const container = document.getElementById('container')
     if (evento.key == 'Enter') {
-        const jogos = await getContatosPorNome(evento.target.value)
+        const jogos = await getJogoPorId(evento.target.value)
         container.replaceChildren('')
-        contatos.forEach(criarCard)
+        jogos.forEach(criarCard)
     }
 }
 

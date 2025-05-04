@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./img/icon_crud.png">
     <script src='./js/main.js' defer type="module"></script>
@@ -10,13 +13,15 @@
 </head>
 <body>
     <header>
-        <img src="./img/logo_crud.png" alt="logo da game control">
+        <a href="./index.html">
+            <img src="./img/logo_crud.png" alt="logo da game control" id="gamecontrol-logo">
+        </a>
         <ul id="menu">
             <li><span>Jogos</span></li>
             <li><span>Desenvolvedoras</span></li>
             <li><span>Gêneros</span></li>
             <li><span>Usuário</span></li>
-            <li><input type="text" placeholder="Pesquise aqui..."></li>
+            <li><input type="text" placeholder="Pesquise aqui..." id="pesquisar"></li>
         </ul>
     </header>
     <main>
