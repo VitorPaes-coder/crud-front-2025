@@ -5,7 +5,7 @@ export async function getJogos() {
         const url = `http://localhost:8080/v1/controle-jogos/jogo`
         const response = await fetch(url)
         const data = await response.json()
-        return data.data // <- aqui é o array de jogos
+        return data.data 
     } catch (erro) {
         console.error('Erro ao buscar jogos:', erro)
         return []
@@ -19,7 +19,7 @@ export async function getJogoPorId(id) {
         const url = `http://localhost:8080/v1/controle-jogos/jogo/${id}`
         const response = await fetch(url)
         const data = await response.json()
-        return [data.data] // transforma o objeto num array
+        return [data.data] 
     } catch (erro) {
         console.error(`Erro ao buscar jogo com ID ${id}:`, erro)
         return []

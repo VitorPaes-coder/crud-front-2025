@@ -1,6 +1,19 @@
 'use strict'
 
-import { getJogos, getJogoPorId } from "./jogo.js"
+import { getJogos, getJogoPorId, postJogo } from "./jogo.js";
+import { uploadImageToAzure } from "./uploadImageToAzure.js"; // Corrigido para importar do arquivo correto
+
+async function handleUploadImage() {
+    const uploadParams = {
+        file: document.getElementById('foto').files[0],
+        storageAccount: 'gameupload',
+        sasToken: 'sp=racwl&st=2025-05-15T12:37:56Z&se=2025-05-15T20:37:56Z&sv=2024-11-04&sr=c&sig=wanMeSo%2BKYkQWH9dXSMFYCVij0RQIGJdJQ8VL%2F%2Bbw8w%3D',
+        containerName: 'fotos',
+    };
+
+    await uploadImageToAzure(uploadParams);
+}
+
 
 async function criarCard(jogo) {
     try {
@@ -8,8 +21,10 @@ async function criarCard(jogo) {
         const card = document.createElement('div')
         card.classList.add('card-jogo')
         card.innerHTML = `
+                            <img src="${jogo.foto_capa}" alt="${jogo.nome}">
                             <h2>${jogo.nome}</h2>
                             <p>${jogo.descricao}</p>
+                            <div></div>
         `
         container.appendChild(card)
     } catch (erro) {
