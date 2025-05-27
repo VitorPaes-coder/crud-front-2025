@@ -1,6 +1,6 @@
 'use strict'
 
-import { getJogos, getJogoPorId, postJogo } from "./jogo.js";
+import { getJogos, getJogoPorId } from "./jogo.js";
 import { uploadImageToAzure } from "./uploadImageToAzure.js"; // Corrigido para importar do arquivo correto
 
 async function handleUploadImage() {

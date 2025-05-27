@@ -26,8 +26,8 @@ export async function getJogoPorId(id) {
     }
 }
 
-
-/** 
+/**
+ 
 async function postJogo(jogo){
     const url = `http://localhost:8080/v1/controle-jogos/`
     const options = {
@@ -42,14 +42,6 @@ async function postJogo(jogo){
 }
 
 
-const novoJogo = {
-    "nome": "Vitor Paes Rodrigues",
-    "celular": "11 40028922",
-    "foto": "../img/vitor-paes.png",
-    "email": "vitor@gmail.com",
-    "endereco": "Av. São Joaquim, 123",
-    "cidade": "Caracas City"
-}
 
 async function putContato(contato, id){
     const url = `https://bakcend-fecaf-render.onrender.com/contatos/${id}`
